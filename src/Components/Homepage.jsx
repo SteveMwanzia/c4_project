@@ -1,8 +1,13 @@
 import React from 'react'
+import Navigation from './Navigation'
+import Hero from './Hero'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+        <Navigation/>
+        <Hero />
+    </div>
   )
 }
 

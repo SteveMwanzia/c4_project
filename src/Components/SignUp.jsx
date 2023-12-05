@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoArrowBackOutline } from "react-icons/io5";
 import Loginimg from "..//assets/images/Frame 73171.png"
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
 
@@ -73,15 +74,15 @@ const SignUp = () => {
     background: "#2ACFCF"
   }
   // Styles
-  
+
   return (
     <div className='MainContainer'  style={Mcontainer}>
       <div className='content'  style={contentstye}>
         <div className='back' style={{display:"flex", gap:'5px',}}>
-          <a href="#">
+          <Link to="/">
             <IoArrowBackOutline size="24" color="#BFBFBF"/>
-          </a>
-          <span>Back</span>
+          </Link>
+          <Link to="/"><span>Back</span></Link>
         </div>
 
         <form>
@@ -125,7 +126,7 @@ const SignUp = () => {
           <button style={buttonsignup} type='Submit'>Sign Up </button>
 
           <div style={{display:'flex',alignContent:'center',justifyContent:'center'}}> 
-              <p >Already have an account?  <span><a href="#">Sign In</a></span></p>
+              <p >Already have an account?  <span><Link to="/signin">Sign In</Link></span></p>
           </div>
 
           

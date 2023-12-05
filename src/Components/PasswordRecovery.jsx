@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoArrowBackOutline } from "react-icons/io5";
 import Loginimg from "..//assets/images/Frame 73171.png"
 import arrowLeft from "../assets/images/Arrow Left.png"
+import { Link } from 'react-router-dom';
 
 const PasswordRecovery = () => {
   const [email, setEmail] = useState("")
@@ -92,11 +93,11 @@ const PasswordRecovery = () => {
           <button style={buttonrecov} type='Submit'>Send recovery code </button>
 
           <div style={{display:"flex", gap:'5px',alignContent:"center", justifyContent:"center"}}>
-            <a href="#">
+            <Link to="/signin">
               {/* <IoArrowBackOutline size="24" color="#BFBFBF"/>  */}
               <img src={arrowLeft} alt="back" /> 
-            </a>
-            <span>Back to sign in</span>
+            </Link>
+            <Link to="/signin" ><span>Back to sign in</span></Link>
           </div>
 
         </form>

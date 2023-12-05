@@ -1,5 +1,6 @@
 import React from 'react'
 import shortlylogo from '../assets/images/logo.svg'
+import { Link } from 'react-router-dom'
 
 const Navigation = () => {
 
@@ -28,8 +29,8 @@ const Navigation = () => {
         </div>
             
         <div style={{display:'flex', gap:'40px', }}>
-            <a href="#"> <h3>Login</h3></a>
-            <button type='Submit' style={button}> Sign Up </button>
+            <Link to='/signin'> <h3>Login</h3></Link>
+            <Link to="/signup"><button type='Submit' style={button}> Sign Up </button></Link>
         </div>
 
     </div>

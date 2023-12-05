@@ -2,6 +2,7 @@ import React from 'react'
 import { IoArrowBackOutline } from "react-icons/io5";
 import Loginimg from "..//assets/images/Frame 73171.png"
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 const SignIn = () => {
@@ -88,10 +89,10 @@ const SignIn = () => {
     <div className='MainContainer'  style={Mcontainer}>
       <div className='content'  style={contentstye}>
         <div className='back' style={{display:"flex", gap:'5px',}}>
-          <a href="#" >
+          <Link to="/">
             <IoArrowBackOutline size="24" color="#BFBFBF"/>
-          </a>
-          <span>Back</span>
+          </Link>
+          <Link to="/" ><span>Back</span></Link>
         </div>
 
         <form>
@@ -114,12 +115,12 @@ const SignIn = () => {
         />
           </div>
 
-          <p>forgot passowrd ?</p>
+          <Link to="/passwordrecovery"><p>forgot passowrd ?</p></Link>
 
           <button style={buttonsignin} type='Submit'>Login </button>
 
           <div style={{display:'flex',alignContent:'center',justifyContent:'center'}}>
-            <p>Don’t have an account yet?  <span><a href="#">Sign Up</a></span></p>
+            <p>Don’t have an account yet?  <span><Link to="/signup">Sign Up</Link></span></p>
           </div>
 
         </form>

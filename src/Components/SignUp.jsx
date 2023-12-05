@@ -33,13 +33,17 @@ const SignUp = () => {
   const input = {
     width: '634px',
     height: '65px',
-    flexShrink: "0"
+    flexShrink: "0",
+    borderRadius: "8px",
+    background: "#EBE9E9"
   }
 
   const inputname = {
     width: '295px',
     height: '65px',
-    flexShrink: "0"
+    flexShrink: "0",
+    borderRadius: "8px",
+    background: "#EBE9E9"
   }
 
   const title = {
@@ -69,13 +73,15 @@ const SignUp = () => {
     background: "#2ACFCF"
   }
   // Styles
+  
   return (
     <div className='MainContainer'  style={Mcontainer}>
       <div className='content'  style={contentstye}>
-        <div className='back'>
+        <div className='back' style={{display:"flex", gap:'5px',}}>
           <a href="#">
             <IoArrowBackOutline size="24" color="#BFBFBF"/>
           </a>
+          <span>Back</span>
         </div>
 
         <form>

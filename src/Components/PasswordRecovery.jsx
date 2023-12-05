@@ -39,7 +39,9 @@ const PasswordRecovery = () => {
   const input = {
     width: '634px',
     height: '65px',
-    flexShrink: "0"
+    flexShrink: "0",
+    borderRadius: "8px",
+    background: "#EBE9E9"
   }
 
   const title = {

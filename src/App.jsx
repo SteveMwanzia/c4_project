@@ -10,8 +10,8 @@ function App() {
     <>
       {/* <HomePage /> */}
       {/* <SignIn /> */}
-      {/* <SignUp/> */}
-      <PasswordRecovery />
+      <SignUp/>
+      {/* <PasswordRecovery /> */}
 
     </>
   )

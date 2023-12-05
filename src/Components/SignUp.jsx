@@ -3,12 +3,18 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import Loginimg from "..//assets/images/Frame 73171.png"
 
 const SignUp = () => {
+
+
+
+  // Style
   const Mcontainer = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    margin: "auto auto",
     width: "999px",
     height: "1024px",
+    fontFamily:"Poppins",
     flexshrink: "0"
   }
 
@@ -23,6 +29,46 @@ const SignUp = () => {
     height: "1024px",
     flexshrink: "0"
   }
+
+  const input = {
+    width: '634px',
+    height: '65px',
+    flexShrink: "0"
+  }
+
+  const inputname = {
+    width: '295px',
+    height: '65px',
+    flexShrink: "0"
+  }
+
+  const title = {
+    color: "#000",
+    fontSize: "32px",
+    fontStyle: "normal",
+    fontWeight: "500",
+    lineHeight: "153.023%"
+  }
+
+  const paragraph = {
+    color: "#000",
+    fontSize: "18px",
+    fontStyle: "normal",
+    fontWeight: "400",
+    lineHeight: "153.023%"
+  }
+
+  const buttonsignup = {
+    display: "flex",
+    width: "634px",
+    padding: "20px 10px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    borderRadius: '8px',
+    background: "#2ACFCF"
+  }
+  // Styles
   return (
     <div className='MainContainer'  style={Mcontainer}>
       <div className='content'  style={contentstye}>
@@ -33,39 +79,50 @@ const SignUp = () => {
         </div>
 
         <form>
-          <div>
-            <h2>Sign up</h2>
-            <p>Get started with Shortly</p>
+          <div style={{display:'flex',flexDirection:"column",alignItems:'center',}} >
+            <h2 style={title}>Sign up</h2>
+            <p style={paragraph}>Get started with Shortly</p>
           </div>
           
           <div style={{display:'flex'}}>
-          <label>First name</label><br />
-          <input 
-          type="text"
-        />
-          <label>Last name</label><br />
-          <input 
-          type="text"
-        />
+            <div>
+              <label>First name</label><br />
+              <input style={inputname}
+              type="text"
+              />
+            </div>
+
+            <div>
+                <label>Last name</label><br />
+              <input  style={inputname}
+              type="text"
+              />
+            </div>
+          
+          
           </div>
 
           <div>
           <label>Password</label><br />
-          <input 
+          <input  style= {input}
           type="password"
         />
           </div>
 
           <div>
           <label>Confirm Password</label><br />
-          <input 
+          <input style= {input}
           type="password"
         />
           </div>
 
-          <button type='Submit'>Sign Up </button>
+          <button style={buttonsignup} type='Submit'>Sign Up </button>
 
-          <p>Already have an account?  <span><a href="#">Sign In</a></span></p>
+          <div style={{display:'flex',alignContent:'center',justifyContent:'center'}}> 
+              <p >Already have an account?  <span><a href="#">Sign In</a></span></p>
+          </div>
+
+          
 
         </form>
 

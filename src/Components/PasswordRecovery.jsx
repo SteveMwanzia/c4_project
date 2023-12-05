@@ -12,13 +12,15 @@ const PasswordRecovery = () => {
     console.log(email)
   }
 
+  // Styles
   const Mcontainer = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: "999px",
+    width: '999x',
     margin: "auto auto",
     height: "1024px",
+    fontFamily:"Poppins",
     flexshrink: "0"
   }
 
@@ -34,31 +36,65 @@ const PasswordRecovery = () => {
     flexshrink: "0"
   }
 
+  const input = {
+    width: '634px',
+    height: '65px',
+    flexShrink: "0"
+  }
+
+  const title = {
+    color: "#000",
+    fontSize: "32px",
+    fontStyle: "normal",
+    fontWeight: "500",
+    lineHeight: "153.023%"
+  }
+
+  const paragraph = {
+    color: "#000",
+    fontSize: "18px",
+    fontStyle: "normal",
+    fontWeight: "400",
+    lineHeight: "153.023%"
+  }
+
+  const buttonrecov = {
+    display: "flex",
+    width: "634px",
+    padding: "20px 10px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    borderRadius: '8px',
+    background: "#2ACFCF"
+  }
+  // Styles
+
   return (
     <div className='MainContainer'  style={Mcontainer}>
       <div className='content'  style={contentstye}>
 
         <form>
           <div>
-            <h2>Forgot Password</h2>
-            <p>Enter the email address you used when you joined and we’ll send you instructions to reset your password</p>
+            <h2 style={title}>Forgot Password</h2>
+            <p style={paragraph}>Enter the email address you used when you joined and we’ll send you instructions to reset your password</p>
           </div>
           
           <div>
           <label>Email</label><br />
-          <input value={email} onChange={handleEmail}
+          <input style={input} value={email} onChange={handleEmail}
           type="text"
         />
           </div>
 
-          <button type='Submit'>Send recovery code </button>
+          <button style={buttonrecov} type='Submit'>Send recovery code </button>
 
-          <div style={{display:"flex"}}>
+          <div style={{display:"flex", gap:'5px',alignContent:"center", justifyContent:"center"}}>
             <a href="#">
               {/* <IoArrowBackOutline size="24" color="#BFBFBF"/>  */}
               <img src={arrowLeft} alt="back" /> 
-              <span>Back to sign in</span>
             </a>
+            <span>Back to sign in</span>
           </div>
 
         </form>

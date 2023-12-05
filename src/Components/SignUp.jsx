@@ -2,8 +2,32 @@ import React from 'react'
 import { IoArrowBackOutline } from "react-icons/io5";
 import Loginimg from "..//assets/images/Frame 73171.png"
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const SignUp = () => {
+  
+  const [firstname, setFirstname] = useState("")
+  const [secname, setSecname] = useState("")
+  const [password, setPassword] = useState("")
+  const [confpassword, setConfpassword] = useState("")
+
+
+  const handleFirstname = (e) => {
+    setFirstname(e.target.value)
+  }
+
+  const handleSecname = (e) => {
+    setSecname(e.target.value)
+  }
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value)
+  }
+
+  const handleConfpassword = (e) => {
+    setConfpassword(e.target.value)
+    console.log(confpassword)
+  }
 
 
 
@@ -94,14 +118,14 @@ const SignUp = () => {
           <div style={{display:'flex'}}>
             <div>
               <label>First name</label><br />
-              <input style={inputname}
+              <input style={inputname} value={firstname} onChange={handleFirstname}
               type="text"
               />
             </div>
 
             <div>
                 <label>Last name</label><br />
-              <input  style={inputname}
+              <input  style={inputname} value={secname} onChange={handleSecname}
               type="text"
               />
             </div>
@@ -111,14 +135,14 @@ const SignUp = () => {
 
           <div>
           <label>Password</label><br />
-          <input  style= {input}
+          <input  style= {input} value={password} onChange={handlePassword}
           type="password"
         />
           </div>
 
           <div>
           <label>Confirm Password</label><br />
-          <input style= {input}
+          <input style= {input} value={confpassword} onChange={handleConfpassword}
           type="password"
         />
           </div>

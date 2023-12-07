@@ -28,16 +28,16 @@ const SignIn = () => {
     justifyContent: 'center',
     alignItems: 'center',
     margin: "auto auto",
-    width: "999px",
+    width: "100%",
     height: "1024px",
     fontFamily:"Poppins",
     flexshrink: "0"
   }
 
   const contentstye = {
-    width: "558px",
+    width: "900px",
     height: "1024px",
-    flexshrink: "0"
+    flexshrink: "0",
   }
 
   const imagestye = {
@@ -61,7 +61,8 @@ const SignIn = () => {
     fontSize: "32px",
     fontStyle: "normal",
     fontWeight: "500",
-    lineHeight: "153.023%"
+    lineHeight: "153.023%",
+    textAlign:'center'
   }
 
   const paragraph = {
@@ -69,7 +70,8 @@ const SignIn = () => {
     fontSize: "18px",
     fontStyle: "normal",
     fontWeight: "400",
-    lineHeight: "153.023%"
+    lineHeight: "153.023%",
+    paddingTop:"10px"
   }
 
   const buttonsignin = {
@@ -88,39 +90,42 @@ const SignIn = () => {
   return (
     <div className='MainContainer'  style={Mcontainer}>
       <div className='content'  style={contentstye}>
-        <div className='back' style={{display:"flex", gap:'5px',}}>
+        <div className='back' style={{display:"flex", gap:'5px',paddingTop:'50px'}}>
           <Link to="/">
             <IoArrowBackOutline size="24" color="#BFBFBF"/>
           </Link>
           <Link to="/" ><span>Back</span></Link>
         </div>
 
-        <form>
-          <div style={{display:'flex',flexDirection:"column",alignItems:'center',}}>
+        <form style={{display:'flex',flexDirection:"column",alignItems:'center',paddingTop:'140px'}} >
+          <div >
             <h2 style={title}>Login</h2>
             <p style={paragraph}>Get started with Shortly</p>
           </div>
           
-          <div>
+          <div style={{paddingTop:'40px'}}>
           <label>Email</label><br />
           <input style={input} value={email} onChange={handleEmail}
           type="text"
         />
           </div>
 
-          <div>
+          <div style={{paddingTop:'40px'}}>
           <label>Password</label><br />
           <input style={input} value={password} onChange={handlePassword}
           type="password"
         />
           </div>
+          
+          <Link to="/passwordrecovery"><p style={{paddingTop:'25px',color:'#F46262',fontWeight:'500', alignItems:'start'}}>forgot passowrd ?</p></Link>
 
-          <Link to="/passwordrecovery"><p>forgot passowrd ?</p></Link>
+          <div style={{paddingTop:'20px',color:'#FFF'}}>
+            <button style={buttonsignin} type='Submit'>Login </button>
+          </div>
+          
 
-          <button style={buttonsignin} type='Submit'>Login </button>
-
-          <div style={{display:'flex',alignContent:'center',justifyContent:'center'}}>
-            <p>Don’t have an account yet?  <span><Link to="/signup">Sign Up</Link></span></p>
+          <div style={{display:'flex',alignContent:'center',justifyContent:'center',paddingTop:"40px"}}>
+            <p style={{fontWeight:'500'}}>Don’t have an account yet?  <span style={{color:'#F46262'}} ><Link to="/signup">Sign Up</Link></span></p>
           </div>
 
         </form>

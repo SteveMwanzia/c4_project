@@ -18,7 +18,7 @@ const PasswordRecovery = () => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '999x',
+    width: '100%',
     margin: "auto auto",
     height: "1024px",
     fontFamily:"Poppins",
@@ -26,9 +26,10 @@ const PasswordRecovery = () => {
   }
 
   const contentstye = {
-    width: "558px",
+    width: "900px",
     height: "1024px",
-    flexshrink: "0"
+    flexshrink: "0",
+    paddingTop: '200px'
   }
 
   const imagestye = {
@@ -58,7 +59,8 @@ const PasswordRecovery = () => {
     fontSize: "18px",
     fontStyle: "normal",
     fontWeight: "400",
-    lineHeight: "153.023%"
+    lineHeight: "153.023%",
+    paddingTop:'20px'
   }
 
   const buttonrecov = {
@@ -69,7 +71,8 @@ const PasswordRecovery = () => {
     alignItems: "center",
     gap: "10px",
     borderRadius: '8px',
-    background: "#2ACFCF"
+    background: "#2ACFCF",
+    color:'#FFF'
   }
   // Styles
 
@@ -77,27 +80,30 @@ const PasswordRecovery = () => {
     <div className='MainContainer'  style={Mcontainer}>
       <div className='content'  style={contentstye}>
 
-        <form>
-          <div>
+        <form style={{display:'flex',flexDirection:"column",alignItems:'center',}}>
+          <div style={{display:'flex',flexDirection:"column",alignItems:'center'}}>
             <h2 style={title}>Forgot Password</h2>
-            <p style={paragraph}>Enter the email address you used when you joined and we’ll send you instructions to reset your password</p>
+            <p style={paragraph}>Enter the email address you used when you joined <br /> and we’ll send you instructions to reset your password</p>
           </div>
           
-          <div>
+          <div style={{paddingTop:'50px'}}>
           <label>Email</label><br />
           <input style={input} value={email} onChange={handleEmail}
           type="text"
         />
+          </div >
+
+          <div style={{paddingTop:'50px'}} >
+            <button style={buttonrecov} type='Submit'>Send recovery code </button>
           </div>
+          
 
-          <button style={buttonrecov} type='Submit'>Send recovery code </button>
-
-          <div style={{display:"flex", gap:'5px',alignContent:"center", justifyContent:"center"}}>
+          <div style={{display:"flex", gap:'5px',alignContent:"center", justifyContent:"center", paddingTop:'50px'}}>
             <Link to="/signin">
               {/* <IoArrowBackOutline size="24" color="#BFBFBF"/>  */}
               <img src={arrowLeft} alt="back" /> 
             </Link>
-            <Link to="/signin" ><span>Back to sign in</span></Link>
+            <Link to="/signin" ><span style={{color:'#F46262'}}>Back to sign in</span></Link>
           </div>
 
         </form>

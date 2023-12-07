@@ -116,8 +116,11 @@ const SignIn = () => {
           type="password"
         />
           </div>
-          
-          <Link to="/passwordrecovery"><p style={{paddingTop:'25px',color:'#F46262',fontWeight:'500', alignItems:'start'}}>forgot passowrd ?</p></Link>
+
+          <div style={{width:'634px',paddingTop:'25px'}}>
+          <Link to="/passwordrecovery"><p style={{color:'#F46262',fontWeight:'500', alignItems:'start'}}>forgot passowrd ?</p></Link>
+          </div>
+  
 
           <div style={{paddingTop:'20px',color:'#FFF'}}>
             <button style={buttonsignin} type='Submit'>Login </button>

@@ -9,26 +9,27 @@ const BoostLinks = () => {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundColor:'#3B3054', 
-    height:'150px',
+    height:'250px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: "20px"
+    gap: "20px",
 
   }
 
   const button = {
     backgroundColor:'hsl(180, 66%, 49%)',
     borderRadius: '50px',
-    padding: '8px 30px',
-    color: 'white'    
+    padding: '10px 40px',
+    color: 'white',
+    fontWeight:'700'    
 
   }
   
   return (
     <div style={boostContainer}>
-      <h2>Boost your links today</h2>
+      <h2 style= {{color:'#fff', fontSize:'40px',fontWeight:'700'}}>Boost your links today</h2>
       <button type='Submit' style={button}>Get Started</button>
     </div>
   )

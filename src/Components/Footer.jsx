@@ -10,16 +10,20 @@ const Footer = () => {
     color:'white',
     display: "flex",
     justifyContent: 'space-between',
-    height:'300px'
+    height:'280px'
   }
 
   const linksContainer = {
-    display:'flex'
+    display:'flex',
+    paddingTop:"70px",
+    gap:'100px'
   }
 
   const iconsContainer = {
     display:'flex',
-    gap:'20px'
+    gap:'20px',
+    paddingTop:"70px",
+    paddingRight:'150px'
   }
 
   const img = {
@@ -27,17 +31,22 @@ const Footer = () => {
     width:'24px'
   }
 
+  const titles = {
+    paddingBottom:"20px",
+    fontWeight:"700"
+  }
+
 
   return (
     <div style={containerFooter}>
 
-      <div>
+      <div style={{paddingTop:"70px", paddingLeft:"150px", fontWeight:'700', fontSize:"35px"}}>
         <h2>Shortly</h2>
       </div>
 
       <div style= {linksContainer}>
         <div>
-          <h5>Features</h5>
+          <h5 style = {titles}>Features</h5>
           <ul>
             <li>Link Shortening</li>
             <li>Branded Links</li>
@@ -46,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h5>Resources</h5>
+          <h5 style = {titles} >Resources</h5>
           <ul>
             <li>Blog</li>
             <li>Developers</li>
@@ -55,7 +64,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h5>Company</h5>
+          <h5 style = {titles} >Company</h5>
           <ul>
             <li>About</li>
             <li>Our Team</li>

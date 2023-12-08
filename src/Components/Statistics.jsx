@@ -32,6 +32,12 @@ const Statistics = () => {
     height:'250px'
   }
 
+  const icons = {
+    backgroundColor:'#3B3054',
+    padding:'15px',
+    borderRadius:'50px'
+  }
+
 
   return (
     <div style={mainContainer}>
@@ -43,19 +49,19 @@ const Statistics = () => {
       <div className='contcontainer' style={statisticsContainer}>
 
         <div style={contcontainer}>
-          <img src={recognitionicon} alt="Brand Recognition" />
+          <img style={icons} src={recognitionicon} alt="Brand Recognition" />
           <h4>Brand Recognition</h4>
           <p>Boost your brand recognition with each click. Generic links don't mean a thin. Branded links help instill confidence in your content.</p>
         </div>
 
         <div className='contcontainer' style={contcontainer} >
-          <img src={recordicon} alt="Detailed Records" />
+          <img style={icons} src={recordicon} alt="Detailed Records" />
           <h4>Detailed Records</h4>
           <p>Gain insights into who is clicking your links. Knowing when and whre people engage with your content helps inform better decisions.</p>
         </div>
 
         <div className='contcontainer' style={contcontainer} >
-          <img src={customizenicon} alt="Fully Customizable" />
+          <img style={icons} src={customizenicon} alt="Fully Customizable" />
           <h4>Fully Customizable</h4>
           <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
         </div>

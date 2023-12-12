@@ -1,13 +1,16 @@
 import React from 'react'
 import heroImage from '../assets/images/illustration-working.svg'
 import shortenBg from '../assets/images/bg-shorten-desktop.svg'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
 
   const contentContainer = {
     display: 'flex',
     justifyContent:'space-between',
-    marginBottom: '60px'
+    marginBottom: '60px',
+    paddingLeft:'100px',
+    paddingBottom:'100px'
     
   }
 
@@ -20,8 +23,9 @@ const Hero = () => {
   const button = {
     backgroundColor:'hsl(180, 66%, 49%)',
     borderRadius: '50px',
-    padding: '8px 30px',
-    color: 'white'    
+    padding: '10px 40px',
+    color: 'white',
+    fontWeight:'700'    
 
   }
 
@@ -44,7 +48,11 @@ const Hero = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: "20px"
+    alignSelf:"center",
+    gap: "20px",
+    width:"80%",
+    position:'absolute',
+    bottom:"-80px"
 
   }
 
@@ -58,14 +66,14 @@ const Hero = () => {
   }
 
   return (
-    <div>
+    <div style={{display:'flex',flexDirection:'column',position:'relative'}}>
 
       <div style={contentContainer}>
 
         <div style={{marginRight:'150px',textAlign: 'left'}} >
           <h1 style={{fontSize:'70px',fontWeight:'bold', margin: '0px', padding: '0px'}}>More than just shorter links</h1>
           <p style={{marginBottom: '30px',}}>Build your brand's recognitio and get detailled <br /> insights on how your links are performing.</p>
-          <button type='Submit' style={button}>Get Started</button>
+          <Link to='/Signin'><button type='Submit' style={button}>Get Started</button></Link>
         </div>
 
         <img style={image} src={heroImage} alt="Illustratin Working" />

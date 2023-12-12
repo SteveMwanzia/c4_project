@@ -8,7 +8,7 @@ const Statistics = () => {
 
   const mainContainer = {
     background:'#f0f1f6',
-    height:'700px',
+    height:'800px',
     display:'flex',
     flexDirection:'column',
     alignItems:'center',
@@ -19,7 +19,9 @@ const Statistics = () => {
 
   const statisticsContainer = {
     display:'flex',
-    gap:'25px'
+    gap:'25px',
+    height:'300px',
+    alignItems: 'center'
   }
 
   const contcontainer = {
@@ -28,14 +30,18 @@ const Statistics = () => {
     paddingLeft:'25px',
     paddingRight:'30px',
     paddingBottom:'35px',
-    width:'320px',
-    height:'250px'
+    width:'340px',
+    height:'250px',
+    position:'relative'
   }
 
   const icons = {
     backgroundColor:'#3B3054',
     padding:'15px',
-    borderRadius:'50px'
+    borderRadius:'50px',
+    position:'absolute',
+    top:"-35px"
+
   }
 
 
@@ -46,13 +52,15 @@ const Statistics = () => {
         <p style={{textAlign:'center',color:'#92929b',fontWeight:'600'}}>Track how your links are performing across the web <br /> with our advanced statistics dashboard.</p>
       </div>
 
-      <div className='contcontainer' style={statisticsContainer}>
+      <div  style={statisticsContainer}>
 
-        <div style={contcontainer}>
+        <div className='contcontainer' style={{ ...contcontainer,alignSelf:'flex-start'}}>
           <img style={icons} src={recognitionicon} alt="Brand Recognition" />
           <h4>Brand Recognition</h4>
           <p>Boost your brand recognition with each click. Generic links don't mean a thin. Branded links help instill confidence in your content.</p>
         </div>
+
+        {/* <div><hr style={{width:"30px",color:'hsl(180, 66%, 49%)',size:'20px'}} /></div> */}
 
         <div className='contcontainer' style={contcontainer} >
           <img style={icons} src={recordicon} alt="Detailed Records" />
@@ -60,7 +68,7 @@ const Statistics = () => {
           <p>Gain insights into who is clicking your links. Knowing when and whre people engage with your content helps inform better decisions.</p>
         </div>
 
-        <div className='contcontainer' style={contcontainer} >
+        <div className='contcontainer'  style={{ ...contcontainer,alignSelf:'flex-end'}}>
           <img style={icons} src={customizenicon} alt="Fully Customizable" />
           <h4>Fully Customizable</h4>
           <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
